@@ -39,8 +39,8 @@ function Sidebar() {
 const {pathname} = useLocation()
   return (
     <>
-    <div className="fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-full shadow-md z-40 font-Goldman" style={{backgroundImage: `url(${sidebarBg})`}}>
-    <div className="bg-black bg-opacity-60 h-full w-full absolute z-20"></div>
+    <div className="fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-full shadow-md z-40 font-Goldman bg-transparent">
+    {/* <div className="bg-black bg-opacity-60 h-full w-full absolute z-20"></div> */}
       <div className="flex gap-3 justify-start items-center pt-8">
         <h1 className="font-extrabold text-2xl px-8 z-30">
           <img src={logo} alt="Logo" />
@@ -61,27 +61,27 @@ const {pathname} = useLocation()
           icon={User}
           label="Odinson"
         /> */}
-        <NavLink to="/team/home" className="text-white font-Goldman flex justify-between items-center bg-[#89E4FF30] rounded-3xl text-xl w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6">
-          <img src={HomeLogo} alt="Home Logo" className="scale-[0.8]" />Home
+        <NavLink to="/team/home" className="text-black md:text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-xl w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6">
+          <img src={HomeLogo} alt="Home Logo" className="scale-[0.8] invert" />Home
         </NavLink>
-        <NavLink to="/team/spidey_squad" className="text-white font-Goldman flex justify-between items-center bg-[#89E4FF30] rounded-3xl text-xl w-4/5 p-3 z-30 h-16 drop-shadow-md">
-          <img src={whiteSpider} className="scale-[0.8]" alt="Home Logo"/>Spider-Man
+        <NavLink to="/team/spidey_squad" className="text-black md:text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-xl w-4/5 p-3 z-30 h-16 drop-shadow-md">
+          <img src={whiteSpider} className="scale-[0.8] invert" alt="Home Logo"/>Spider-Man
         </NavLink>
-        <NavLink to="/team/tony_techies" className="text-white font-Goldman flex justify-between items-center bg-[#89E4FF30] rounded-3xl text-xl w-4/5 p-3 z-30 h-16">
-          <img src={arcReact} alt="Home Logo" /> Iron Man
+        <NavLink to="/team/tony_techies" className="text-black md:text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-xl w-4/5 p-3 z-30 h-16">
+          <img src={arcReact} alt="Home Logo" className="invert" /> Iron Man
         </NavLink>
-        <NavLink to="/team/cap_crusader" className="text-white font-Goldman flex justify-between items-center bg-[#89E4FF30] rounded-3xl text-sm w-4/5 p-3 z-30 h-16">
-          <img src={capShield} className="h-12 w-12" alt="Home Logo" /> Captain America
+        <NavLink to="/team/cap_crusader" className="text-black md:text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-sm w-4/5 p-3 z-30 h-16">
+          <img src={capShield} className="h-12 w-12 invert" alt="Home Logo" /> Captain America
         </NavLink>
-        <NavLink to="/team/odinson_olympians" className="text-white font-Goldman flex justify-between items-center bg-[#89E4FF30] rounded-3xl text-xl w-4/5 p-3 z-30 h-16">
-          <img src={HomeLogo} alt="Home Logo" className="scale-[0.8]" />Home
+        <NavLink to="/team/odinson_olympians" className="text-black md:text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-xl w-4/5 p-3 z-30 h-16">
+          <img src={HomeLogo} alt="Home Logo" className="scale-[0.8] invert" />Home
         </NavLink>
       </div>
 
       {/* Footer */}
-      <div className="mb-10">
+      {/* <div className="mb-10">
         <p className="text-center text-xs text-gray-500">&copy; 2024 Edstock</p>
-      </div>
+      </div> */}
     </div>
     </>
   );

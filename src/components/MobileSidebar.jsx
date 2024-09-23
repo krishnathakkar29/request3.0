@@ -7,7 +7,7 @@ const MobileSidebar = () => {
   return (
     <Sheet>
       <SheetTrigger className="md:hidden pr-4">
-        <Menu />
+        <Menu className="invert" />
       </SheetTrigger>
       <SheetContent className="p-0 bg-secondary pt-10 w-64" side="left">
         <Sidebar />

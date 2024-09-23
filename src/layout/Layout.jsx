@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar";
 
 function Layout({ children }) {
   return (
-    <div className="h-full">
+    <>
+    <div className="bg-[#00000095] h-full w-full hidden md:visible fixed z-10 mx-5"></div>
+    <div className="h-full bg-container bg-fixed bg-cover bg-no-repeat object-cover">
       <div className="h-16 md:hidden">
         <Navbar />
       </div>
@@ -14,6 +16,7 @@ function Layout({ children }) {
 
       <main className="md:pl-64 h-full">{children}</main>
     </div>
+    </>
   );
 }
 
