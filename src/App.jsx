@@ -38,9 +38,11 @@ function App() {
             <Route
               path="/"
               element={
-                <><Layout><Home /></Layout>
-                  {/* <Sidebar /> */}
-                  
+                <>
+                  {/* <Layout><Home /></Layout> */}
+
+                  <Sidebar />
+                  <Home />
                 </>
               }
             />
@@ -48,7 +50,7 @@ function App() {
               path="team/:team"
               element={
                 <>
-                  <Layout>  
+                  <Layout>
                     <Scores />
                   </Layout>
                   {/* <Sidebar/>
