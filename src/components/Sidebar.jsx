@@ -1,20 +1,15 @@
+import AllScoresContext from "@/context/AllScoresContext";
 import {
-  Archive,
-  CircleDollarSign,
-  Clipboard,
-  Layout,
-  User,
+  Menu
 } from "lucide-react";
-import React from "react";
-import { useLocation, Link, NavLink } from "react-router-dom";
-import logo from "../assets/request3Logo-removebg-preview.png";
-import sidebarBg from "../assets/sidebar-bg.png";
-import HomeLogo from "../assets/Home.png";
-import whiteSpider from "../assets/whiteSpider.png";
+import { useContext } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import arcReact from "../assets/arcReact.png";
 import capShield from "../assets/capShield.png";
-import group2 from "../assets/Group 2.png";
 import group2new from "../assets/group2newfinal.png";
+import HomeLogo from "../assets/Home.png";
+import logo from "../assets/request3Logo-removebg-preview.png";
+import whiteSpider from "../assets/whiteSpider.png";
 
 const SidebarLink = ({ href, icon: Icon, label }) => {
   const pathname = useLocation();
@@ -39,12 +34,15 @@ const SidebarLink = ({ href, icon: Icon, label }) => {
 function Sidebar() {
   const sidebarClassNames = `fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-full shadow-md z-40`;
 const {pathname} = useLocation()
+
   return (
     <>
     <div className="fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-screen shadow-md z-40 font-Goldman bg-contain bg-no-repeat" >
     {/* style={{backgroundImage: `url(${group2new})`}} */}
+    {/* <X className=" absolute md:hidden right-0 top-4 w-10 h-10 text-black z-50" onClick={() => setIsSidebarOpen(false)}/> */}
     <img src={group2new} alt="group 2 new" className={`sideBG absolute w-full h-full ${pathname !== "/" && "hidden"}`} />
     {/* <img src={group2} alt="sidebar bg" className="relative" /> */}
+
     <div className="bg-black bg-opacity-60 h-full w-full absolute z-20"></div>
       <div className="flex gap-3 justify-start items-center pt-8">
         <h1 className="font-extrabold text-2xl px-8 z-30">

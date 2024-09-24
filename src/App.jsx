@@ -9,6 +9,7 @@ import AllScoresContext from "./context/AllScoresContext";
 import Sidebar from "./components/Sidebar.jsx";
 function App() {
   const [allScores, setAllScores] = useState({});
+  const [isSidebarOpen , setIsSidebarOpen] = useState(false)
 
   const fetchScores = async () => {
     const response = await axios.get(
@@ -32,17 +33,17 @@ function App() {
 
   return (
     <>
-      <AllScoresContext.Provider value={{ allScores, setAllScores }}>
+      <AllScoresContext.Provider value={{ allScores, setAllScores, isSidebarOpen, setIsSidebarOpen }}>
         <BrowserRouter>
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  {/* <Layout><Home /></Layout> */}
+                  <Layout><Home /></Layout>
 
-                  <Sidebar />
-                  <Home />
+                  {/* <Sidebar />
+                  <Home /> */}
                 </>
               }
             />

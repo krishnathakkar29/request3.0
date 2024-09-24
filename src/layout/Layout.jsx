@@ -11,7 +11,7 @@ function Layout({ children }) {
       <div className="h-16 md:hidden">
         <Navbar />
       </div>
-      <div className="hidden md:flex w-64 flex-col relative inset-y-0">
+      <div className="hidden md:flex w-64 flex-col relative inset-y-0 z-50">
         <Sidebar />
       
       </div>
