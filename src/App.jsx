@@ -13,7 +13,7 @@ function App() {
 
   const fetchScores = async () => {
     const response = await axios.get(
-      "https://script.googleusercontent.com/macros/echo?user_content_key=FW1SkB1HkewNM1pXURYzasFIxjiACoj9a6Yx9PdeXctCgZVJ17rWw6QxYLu14Z4-VkmVTj8Txfb_ZeTWRZIOcnMQjdrWMD1Vm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnAEFBR0HgEroBG3EwVVV0G-T09q4vtT5ZDb-povGb_9boDqKLBf9tN0Qj2wZVEEK_Quu197fAvp00mUhz3GCOShdg7H02OWP8g&lib=MfBbnKIdD6ukmKAdyS-OY4A16_JWBohlm"
+      "https://script.googleusercontent.com/macros/echo?user_content_key=1v4Si4a0B3f91LwOFEpqNhP-AboNkzY9EYNgS4etHup3DD8JHIe74tltNolwW71OTF7jNOik9mFWaHOT2xkuG-anudVpyUM2m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIDBRny3--5zsF62jgoRYXvRl42HButPI72IVVHB9AE_8Qhhmu1lJ1NOG24HYWbQmnZGsupB20nAwd-JFlH8w5x9-oI_ouTmGg&lib=MWBYe4i-sINVKasSrdIcjMQ16_JWBohlm"
     );
 
     const data = response.data;
