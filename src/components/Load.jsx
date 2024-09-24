@@ -17,20 +17,18 @@ const ArcReactorLoader = () => {
 
     const randomIndex = Math.floor(Math.random() * loadingText.length);
     const randomLoadingText = loadingText[randomIndex];
-    
-    const [textLoad, setTextLoad] = useState([]);
 
-    useEffect(() => {
-        const randomIndex1 = Math.floor(Math.random() * loadingText.length);
-        const randomLoadingText1 = loadingText[randomIndex1];
-        const randomIndex2 = Math.floor(Math.random() * loadingText.length);
-        const randomLoadingText2 = loadingText[randomIndex2];
-        const randomIndex3 = Math.floor(Math.random() * loadingText.length);
-        const randomLoadingText3 = loadingText[randomIndex3];
-        setTextLoad([randomLoadingText1, randomLoadingText2, ]);        
-    }, []);
+    // useEffect(() => {
+    //     const randomIndex1 = Math.floor(Math.random() * loadingText.length);
+    //     const randomLoadingText1 = loadingText[randomIndex1];
+    //     const randomIndex2 = Math.floor(Math.random() * loadingText.length);
+    //     const randomLoadingText2 = loadingText[randomIndex2];
+    //     const randomIndex3 = Math.floor(Math.random() * loadingText.length);
+    //     const randomLoadingText3 = loadingText[randomIndex3];
+    //     setTextLoad([randomLoadingText1]);        
+    // }, []);
   return (
-    <div className='w-full h-screen flex flex-col justify-center items-center bg-gray-700'>
+    <div className='min-h-screen min-w-screen flex flex-col justify-center items-center'>
         <div className='w-80 h-80 relative scale-[1.5]'>
             {/* COIL RING*/}
             <div className='absolute h-44 w-44 rounded-full bg-white m-auto inset-0 shadow-[0_0_5px_1px_#52fefe]'>
@@ -69,8 +67,10 @@ const ArcReactorLoader = () => {
             </div>
             
         </div>
-        <div className="random-text typewriter text-3xl text-white w-1/2">
+        <div className="random-text flex justify-center items-center text-3xl text-white w-1/2">
+            <p className='typewriter' style={{maxWidth:"fit-content"}}>
             {randomLoadingText}
+            </p>
         </div>
     </div>
   )

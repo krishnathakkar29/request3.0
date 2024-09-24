@@ -19,7 +19,7 @@ export default {
 			"315":"315deg"
 		  },
 		  animation:{
-			"spinner":"spin 3s linear infinite"
+			"spinner":"spin 5s linear infinite"
 		  },
   		borderRadius: {
   			lg: 'var(--radius)',

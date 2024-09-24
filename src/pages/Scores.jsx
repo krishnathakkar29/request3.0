@@ -220,15 +220,13 @@ const Scores = () => {
                   {team.split("_")[1]?.toUpperCase()}
                 </span>
               </h1>
-              <div className="jarvis z-30 hidden sm:flex justify-center items-center gap-2">
+              <div className="jarvis z-30 hidden sm:flex justify-center items-center gap-20">
                 <img
                   src={jarvisImg}
                   alt="jarvis"
                   className="h-16 md:h-20 lg:h-28"
                 />
                 <span className="jarvis-text text-sm md:text-xl text-white text-center z-30">
-                  Updating Leaderboard...
-                  <br />
                   <b>JARVIS is</b> <br />
                   watching closely!
                 </span>

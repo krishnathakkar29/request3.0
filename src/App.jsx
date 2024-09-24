@@ -6,6 +6,7 @@ import Layout from "./layout/Layout";
 import Scores from "./pages/Scores";
 import axios from "axios";
 import AllScoresContext from "./context/AllScoresContext";
+import Sidebar from "./components/Sidebar.jsx";
 function App() {
   const [allScores, setAllScores] = useState({});
 
@@ -37,18 +38,21 @@ function App() {
             <Route
               path="/"
               element={
-                <Layout>
-                  <Home />
-                </Layout>
+                <><Layout><Home /></Layout>
+                  {/* <Sidebar /> */}
+                  
+                </>
               }
             />
             <Route
               path="team/:team"
               element={
                 <>
-                  <Layout>
+                  <Layout>  
                     <Scores />
                   </Layout>
+                  {/* <Sidebar/>
+                  <Scores /> */}
                 </>
               }
             />
