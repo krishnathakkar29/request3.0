@@ -7,9 +7,12 @@ import Scores from "./pages/Scores";
 import axios from "axios";
 import AllScoresContext from "./context/AllScoresContext";
 import Sidebar from "./components/Sidebar.jsx";
+import { Sidebar2 } from "./test/Home2";
+import Sidebar3 from "./test/Sidebar3";
+import Navbar from "./components/Navbar";
 function App() {
   const [allScores, setAllScores] = useState({});
-  const [isSidebarOpen , setIsSidebarOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const fetchScores = async () => {
     const response = await axios.get(
@@ -33,17 +36,21 @@ function App() {
 
   return (
     <>
-      <AllScoresContext.Provider value={{ allScores, setAllScores, isSidebarOpen, setIsSidebarOpen }}>
+      <AllScoresContext.Provider
+        value={{ allScores, setAllScores, isSidebarOpen, setIsSidebarOpen }}
+      >
         <BrowserRouter>
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <Layout><Home /></Layout>
-
-                  {/* <Sidebar />
-                  <Home /> */}
+                  {/* <Layout> */}
+                  {/* <Sidebar2 /> */}
+                  {/* </Layout> */}
+                  <Navbar />
+                  <Sidebar3 />
+                  <Home />
                 </>
               }
             />
@@ -51,9 +58,11 @@ function App() {
               path="team/:team"
               element={
                 <>
-                  <Layout>
-                    <Scores />
-                  </Layout>
+                  {/* <Layout> */}
+                  <Navbar />
+                  <Sidebar3 />
+                  <Scores />
+                  {/* </Layout> */}
                   {/* <Sidebar/>
                   <Scores /> */}
                 </>

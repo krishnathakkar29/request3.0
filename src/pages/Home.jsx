@@ -391,7 +391,7 @@ function App() {
     
     
   
-    <div className="h-screen w-[100vw - 256px]">
+    <div className="h-screen w-[100vw - 256px] ">
       <Canvas shadows className="bg-black">
       <Suspense fallback={<Html><LoadHome /></Html>}>
 

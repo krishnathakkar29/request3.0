@@ -36,14 +36,14 @@ function Sidebar() {
 
   return (
     <>
-      <div className="fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-screen shadow-md z-40 font-Goldman bg-contain bg-no-repeat">
+      <div className="fixed w-64 flex flex-col transition-all duration-300 overflow-hidden h-screen shadow-md z-40 font-Goldman sideBG bg-contain bg-no-repeat">
         {/* style={{backgroundImage: `url(${group2new})`}} */}
         {/* <X className=" absolute md:hidden right-0 top-4 w-10 h-10 text-black z-50" onClick={() => setIsSidebarOpen(false)}/> */}
         <img
           src={group2new}
           alt="group 2 new"
           className={`sideBG absolute w-full h-full ${
-            pathname !== "/" && "hidden"
+            pathname !== "/" 
           }`}
         />
         {/* <img src={group2} alt="sidebar bg" className="relative" /> */}
