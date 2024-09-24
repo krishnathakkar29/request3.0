@@ -204,7 +204,7 @@ const Scores = () => {
         <>
           {/* <div className="opaque-bg h-full w-full bg-black opacity-60 fixed z-10"></div> */}
           <div
-            className={` bg-container bg-opacity-90 w-full h-full min-h-screen overflow-auto bg-fixed bg-cover bg-no-repeat object-cover m-0 scrollbar-hide md:pl-64 flex flex-col justify-center items-center pt-32 md:pt-0`}
+            className={` bg-container bg-opacity-90 w-full h-full min-h-screen overflow-auto bg-fixed bg-cover bg-no-repeat object-cover m-0 scrollbar-hide md:pl-64 flex flex-col justify-center items-center pt-20 md:pt-0`}
           >
             <div
               className={`team-header flex md:flex-row justify-center sm:justify-between mx-auto w-11/12 md:w-4/5 border-b-4 z-30 border-b-[#F4F6F595] ${

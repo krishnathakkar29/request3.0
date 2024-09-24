@@ -1,4 +1,10 @@
-import React, { Suspense,useContext, useEffect, useRef, useState } from "react";
+import React, {
+  Suspense,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Canvas, extend } from "@react-three/fiber";
 import {
   useGLTF,
@@ -8,7 +14,7 @@ import {
   OrbitControls,
   SpotLight,
   Preload,
-  Html
+  Html,
 } from "@react-three/drei";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { PlaneGeometry } from "three";
@@ -17,7 +23,7 @@ import AllScoresContext from "@/context/AllScoresContext";
 import { all } from "axios";
 import Load from "../components/Load.jsx";
 import LoadHome from "@/components/LoadHome.jsx";
-
+import { useLocation } from "react-router-dom";
 
 // import { rect } from 'three'; // Assuming Rect is from 'three'
 
@@ -33,7 +39,6 @@ import LoadHome from "@/components/LoadHome.jsx";
 //   );
 // }
 
-
 const IronManModel = () => {
   const { scene, animations } = useGLTF("/assets/ironman_idle.glb");
 
@@ -44,16 +49,15 @@ const IronManModel = () => {
   }, []);
 
   const [loading, setLoading] = useState(true);
-  
+
   const { allScores, setAllScores } = useContext(AllScoresContext);
   useEffect(() => {
-    if(allScores["home"]) {
+    if (allScores["home"]) {
       setLoading(false);
     } else {
       setLoading(true);
     }
   }, [allScores]);
-
 
   return (
     <>
@@ -80,34 +84,37 @@ const IronManModel = () => {
         />
         Tony's Techies
       </Text>
-      {loading? <Text
-        position={[6.65, 3.5, -0.5]} // Exact surface of the model
-        fontSize={0.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        Loading..
-      </Text>:
-      <Text
-        position={[-0.1, 3.4, 6.6]} // Exact surface of the model
-        fontSize={1.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, 0, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        {allScores["home"][1]["score"]}
-      </Text>}
+      {loading ? (
+        <Text
+          position={[-0.1, 3.4, 6.6]} // Exact surface of the model
+          fontSize={0.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, 0, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          Loading...
+        </Text>
+      ) : (
+        <Text
+          position={[-0.1, 3.4, 6.6]} // Exact surface of the model
+          fontSize={1.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, 0, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          {allScores["home"][1]["score"]}
+        </Text>
+      )}
     </>
   );
 };
@@ -141,10 +148,10 @@ const ThorModel = () => {
   }, []);
 
   const [loading, setLoading] = useState(true);
-  
+
   const { allScores, setAllScores } = useContext(AllScoresContext);
   useEffect(() => {
-    if(allScores["home"]) {
+    if (allScores["home"]) {
       setLoading(false);
     } else {
       setLoading(true);
@@ -176,34 +183,37 @@ const ThorModel = () => {
         />
         Odinson's Olympians
       </Text>
-      {loading? <Text
-        position={[6.65, 3.5, -0.5]} // Exact surface of the model
-        fontSize={0.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        Loading..
-      </Text>:
-      <Text
-        position={[-0.2, 3.5, -6.6]} // Exact surface of the model
-        fontSize={1.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        {allScores["home"][3]["score"]}
-      </Text>}
+      {loading ? (
+        <Text
+          position={[-0.2, 3.5, -6.6]} // Exact surface of the model
+          fontSize={0.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, Math.PI, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          Loading...
+        </Text>
+      ) : (
+        <Text
+          position={[-0.2, 3.5, -6.6]} // Exact surface of the model
+          fontSize={1.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, Math.PI, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          {allScores["home"][3]["score"]}
+        </Text>
+      )}
     </>
   );
 };
@@ -218,16 +228,15 @@ const SpiderModel = () => {
   }, []);
 
   const [loading, setLoading] = useState(true);
-  
+
   const { allScores, setAllScores } = useContext(AllScoresContext);
   useEffect(() => {
-    if(allScores["home"]) {
+    if (allScores["home"]) {
       setLoading(false);
     } else {
       setLoading(true);
     }
   }, [allScores]);
-
 
   return (
     <>
@@ -254,34 +263,37 @@ const SpiderModel = () => {
         />
         Spidey's Squad
       </Text>
-      {loading? <Text
-        position={[6.65, 3.5, -0.5]} // Exact surface of the model
-        fontSize={0.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        Loading..
-      </Text>:
-      <Text
-        position={[-6.65, 3.5, 0.6]} // Exact surface of the model
-        fontSize={1.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, -Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        {allScores["home"][0]["score"]}
-      </Text>}
+      {loading ? (
+        <Text
+          position={[-6.65, 3.5, 0.6]} // Exact surface of the model
+          fontSize={0.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, -Math.PI / 2, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          Loading...
+        </Text>
+      ) : (
+        <Text
+          position={[-6.65, 3.5, 0.6]} // Exact surface of the model
+          fontSize={1.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, -Math.PI / 2, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          {allScores["home"][0]["score"]}
+        </Text>
+      )}
     </>
   );
 };
@@ -304,16 +316,15 @@ const CaptainModel = () => {
   const textPositionZ1 = 0.9; // Exact front surface of the model
 
   const [loading, setLoading] = useState(true);
-  
+
   const { allScores, setAllScores } = useContext(AllScoresContext);
   useEffect(() => {
-    if(allScores["home"]) {
+    if (allScores["home"]) {
       setLoading(false);
     } else {
       setLoading(true);
     }
   }, [allScores]);
-
 
   return (
     <>
@@ -340,101 +351,128 @@ const CaptainModel = () => {
         />
         Cap's Crusader
       </Text>
-      {loading? <Text
-        position={[6.65, 3.5, -0.5]} // Exact surface of the model
-        fontSize={0.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        Loading..
-      </Text>:<>
-      <Text
-        position={[6.65, 3.5, -0.5]} // Exact surface of the model
-        fontSize={1.5}
-        anchorX="center"
-        anchorY="middle"
-        rotation={[0, Math.PI / 2, 0]}
-      >
-        <meshStandardMaterial
-          color="#00B5FF"
-          emissive="#00B5FF"
-          emissiveIntensity={10}
-        />
-        {/* 200 */}
-        {allScores["home"][2]["score"]}
-        {/* 9999 */}
-      </Text></>}
+      {loading ? (
+        <Text
+          position={[6.65, 3.5, -0.5]} // Exact surface of the model
+          fontSize={0.5}
+          anchorX="center"
+          anchorY="middle"
+          rotation={[0, Math.PI / 2, 0]}
+        >
+          <meshStandardMaterial
+            color="#00B5FF"
+            emissive="#00B5FF"
+            emissiveIntensity={10}
+          />
+          {/* 200 */}
+          Loading...
+          {/* 9999 */}
+        </Text>
+      ) : (
+        <>
+          <Text
+            position={[6.65, 3.5, -0.5]} // Exact surface of the model
+            fontSize={1.5}
+            anchorX="center"
+            anchorY="middle"
+            rotation={[0, Math.PI / 2, 0]}
+          >
+            <meshStandardMaterial
+              color="#00B5FF"
+              emissive="#00B5FF"
+              emissiveIntensity={10}
+            />
+            {/* 200 */}
+            {allScores["home"][2]["score"]}
+            {/* 9999 */}
+          </Text>
+        </>
+      )}
     </>
   );
 };
 
 function App() {
-
   const { allScores, setAllScores } = useContext(AllScoresContext);
   const [loading, setLoading] = useState(true);
-  
+  const [count, setCount] = useState(0);
+
   useEffect(() => {
-    if(allScores["home"]) {
+    if (allScores["home"]) {
       setLoading(false);
     } else {
       setLoading(true);
     }
   }, [allScores]);
 
-  return  (
-    
-    
-  
-    <div className="h-screen w-[100vw - 256px] ">
-      <Canvas shadows className="bg-black">
-      <Suspense fallback={<Html><LoadHome /></Html>}>
+  const location = useLocation();
 
-         {/* Add lights and camera */}
-      {/* <ambientLight intensity={0.5} />
+  useEffect(() => {
+    // Set loading to true when the component mounts or location changes
+    setLoading(true);
+
+    // Simulate loading time (replace with your actual loading logic)
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust time as needed
+
+    return () => clearTimeout(timer); // Cleanup on unmount
+  }, [location]);
+
+  return (
+    <div className="h-screen w-[100vw - 256px] ">
+      <>
+        {loading ? (
+          <Load />
+        ) : (
+          <Canvas shadows className="bg-black">
+            <Suspense
+              fallback={
+                <Html>
+                  <LoadHome />
+                </Html>
+              }
+            >
+              {/* Add lights and camera */}
+              {/* <ambientLight intensity={0.5} />
       <directionalLight position={[2, 5, 2]} />
       Render the rectangle
       <Rect /> */}
-        {/* <Sidebar /> */}
-        <PerspectiveCamera
-          makeDefault
-          rotation={[0, 89.49, 0]}
-          position={[20, 3.48, 0]}
-        />
+              {/* <Sidebar /> */}
+              <PerspectiveCamera
+                makeDefault
+                rotation={[0, 89.49, 0]}
+                position={[20, 3.48, 0]}
+              />
 
-        <pointLight
-          position={[-27.56, 25.33, 20.582]}
-          color="#ABECFF"
-          intensity={10000}
-          decay={2.1}
-          // castShadow
-          // shadow-mapSize={[512, 512]}
-        />
-        <pointLight
-          position={[22.926, 25.441, 30.069]}
-          color="#ABECFF"
-          intensity={5000}
-          decay={2}
-        />
-        <pointLight
-          position={[12.963, 24.397, -31.89]}
-          color="#ABECFF"
-          intensity={5000}
-          decay={2}
-        />
+              <pointLight
+                position={[-27.56, 25.33, 20.582]}
+                color="#ABECFF"
+                intensity={10000}
+                decay={2.1}
+                // castShadow
+                // shadow-mapSize={[512, 512]}
+              />
+              <pointLight
+                position={[22.926, 25.441, 30.069]}
+                color="#ABECFF"
+                intensity={5000}
+                decay={2}
+              />
+              <pointLight
+                position={[12.963, 24.397, -31.89]}
+                color="#ABECFF"
+                intensity={5000}
+                decay={2}
+              />
 
-        <CaptainModel />
+              <CaptainModel />
 
-        <SpiderModel />
-        <IronManModel />
-        <ThorModel />
-        <Test />
-        {/* <mesh
+              <SpiderModel />
+              <IronManModel />
+              <ThorModel />
+              <Test />
+              {/* <mesh
           receiveShadow
           position={[0, -0.1, 0]}
           rotation={[-Math.PI / 2, 0, 0]}
@@ -442,20 +480,26 @@ function App() {
           <planeGeometry args={[100, 100]} />
           <shadowMaterial attach="material" opacity={0.5} />
         </mesh> */}
-        {/* <fogExp2 attach="fog" color="#14616C" density={0.005} /> */}
-        <EffectComposer>
-          <Bloom intensity={0.1} luminanceThreshold={0.5} mipmapBlur={false} />
-        </EffectComposer>
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          maxPolarAngle={Math.PI / 2.11}
-          minPolarAngle={Math.PI / 3}
-          // target={}
-        />
-        </Suspense>
-      <Preload all />
-      </Canvas>
+              {/* <fogExp2 attach="fog" color="#14616C" density={0.005} /> */}
+              <EffectComposer>
+                <Bloom
+                  intensity={0.1}
+                  luminanceThreshold={0.5}
+                  mipmapBlur={false}
+                />
+              </EffectComposer>
+              <OrbitControls
+                enableZoom={false}
+                enablePan={false}
+                maxPolarAngle={Math.PI / 2.11}
+                minPolarAngle={Math.PI / 3}
+                // target={}
+              />
+            </Suspense>
+            <Preload all />
+          </Canvas>
+        )}
+      </>
     </div>
     // </Suspense>
   );

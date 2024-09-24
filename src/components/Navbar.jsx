@@ -1,7 +1,4 @@
 import React from "react";
-import { FiMenu } from "react-icons/fi";
-import { FaSync } from "react-icons/fa";
-import { Menu, X } from "lucide-react";
 import Logo from "../assets/request3Logo-removebg-preview.png";
 import MobileSidebar from "./MobileSidebar";
 import { useLocation } from "react-router-dom";
@@ -15,7 +12,7 @@ const Navbar = ({
   const { pathname } = useLocation();
   return (
     <div
-      className="md:hidden w-full fixed flex items-center justify-between  py-4 min-h-20 bg-transparent z-40"
+      className="md:hidden w-full absolute flex items-center justify-between  min-h-20 bg-transparent z-40"
       {...rest}
     >
       {/* Icon button for opening the menu */}
@@ -29,7 +26,7 @@ const Navbar = ({
         <img
           className={`${
             pathname === "/" && "hidden"
-          } w-36 h-auto rounded-lg object-contain`}
+          } w-[9.5rem] mr-10 h-auto rounded-lg object-contain`}
           src={Logo}
           alt="Logo"
         />

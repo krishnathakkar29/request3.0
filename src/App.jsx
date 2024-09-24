@@ -7,7 +7,7 @@ import Scores from "./pages/Scores";
 import axios from "axios";
 import AllScoresContext from "./context/AllScoresContext";
 import Sidebar from "./components/Sidebar.jsx";
-import { Sidebar2 } from "./test/Home2";
+// import { Sidebar2 } from "./test/Home2";
 import Sidebar3 from "./test/Sidebar3";
 import Navbar from "./components/Navbar";
 function App() {

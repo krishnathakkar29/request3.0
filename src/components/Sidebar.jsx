@@ -42,9 +42,7 @@ function Sidebar() {
         <img
           src={group2new}
           alt="group 2 new"
-          className={`sideBG absolute w-full h-full ${
-            pathname !== "/" 
-          }`}
+          className={`sideBG absolute w-full h-full ${pathname !== "/"}`}
         />
         {/* <img src={group2} alt="sidebar bg" className="relative" /> */}
 
