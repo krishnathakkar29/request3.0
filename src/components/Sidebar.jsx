@@ -85,7 +85,7 @@ function Sidebar() {
 
           <NavLink
             to="/"
-            className=" text-white font-Goldman flex justify-between items-center rounded-3xl text-sm sm:text-xl w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6 border-2"
+            className=" text-white font-Goldman flex justify-start gap-8 items-center rounded-3xl text-sm sm:text-xl w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6 border-2"
           >
             <img
               src={HomeLogo}
@@ -121,7 +121,7 @@ function Sidebar() {
               className="h-12 w-12 invert"
               alt="Captain's shield Logo"
             />
-            Cap's Crusader
+            Cap's Crusaders
           </NavLink>
           <NavLink
             to="/team/odinson_olympians"

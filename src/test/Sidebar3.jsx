@@ -118,7 +118,7 @@ function Sidebar3() {
       <div className="flex-grow mt-8 flex flex-col justify-start items-center gap-4">
         <NavLink
           to="/"
-          className=" text-white font-Goldman flex justify-between items-center rounded-3xl text-sm sm:text-base w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6 border-2"
+          className=" text-white font-Goldman flex justify-start gap-8 items-center rounded-3xl text-sm sm:text-base w-4/5 p-3 z-30 drop-shadow-md h-16 pr-6 border-2"
         >
           <img
             src={HomeLogo}
@@ -147,14 +147,14 @@ function Sidebar3() {
         </NavLink>
         <NavLink
           to="/team/cap_crusader"
-          className=" text-white font-Goldman flex justify-between items-center bg-[#89E4FF20] rounded-3xl text-sm sm:text-base w-4/5 p-3 z-30 h-16 border-2"
+          className=" text-white font-Goldman flex justify-start gap-5 items-center bg-[#89E4FF20] rounded-3xl text-sm sm:text-base w-4/5 p-3 z-30 h-16 border-2"
         >
           <img
             src={capShield}
             className="h-12 w-12 invert"
             alt="Captain's shield Logo"
           />
-          Cap's Crusader
+          Cap's <br /> Crusaders
         </NavLink>
         <NavLink
           to="/team/odinson_olympians"
