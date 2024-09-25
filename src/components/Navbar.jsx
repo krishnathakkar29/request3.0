@@ -26,7 +26,7 @@ const Navbar = ({
         <img
           className={`${
             pathname === "/" && "hidden"
-          } w-[9.5rem] mr-10 h-auto rounded-lg object-contain`}
+          } w-[9.5rem] pt-4 mr-10 h-auto rounded-lg object-contain`}
           src={Logo}
           alt="Logo"
         />

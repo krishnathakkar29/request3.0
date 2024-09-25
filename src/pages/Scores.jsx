@@ -212,10 +212,10 @@ const Scores = () => {
               }`}
             >
               <h1 className="team-name z-30 max-w-96 text-4xl md:text-5xl font-bold text-center py-4 tracking-widest self-center flex flex-wrap justify-center gap-2">
-                <span className="team-fname pt-1 pl-1 z-30 sm:h-8 lg:h-12 sm:text-2xl lg:text-5xl bg-red-700 inline-flex justify-center font-MarvelFont text-white">
-                  {team.split("_")[0]?.toUpperCase()}
+                <span className="team-fname pt-1 z-30 sm:h-8 lg:h-12 sm:text-2xl lg:text-5xl px-1  bg-red-700 inline-flex justify-center font-MarvelFont text-white">
+                  {team.split("_")[0]?.toUpperCase()}'S
                 </span>
-                <span className="team-lname sm:h-8 lg:h-12 sm:text-2xl lg:text-5xl inline-flex justify-center font-MarvelFont text-[#838383] border-t-4 border-b-4 border-[#838383]">
+                <span className="team-lname sm:h-8 lg:h-12  sm:text-2xl lg:text-5xl inline-flex justify-center font-MarvelFont text-[#838383] border-t-4 border-b-4 border-[#838383]">
                   {team.split("_")[1]?.toUpperCase()}
                 </span>
               </h1>

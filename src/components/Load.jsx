@@ -2,16 +2,11 @@ import React, { useEffect, useState } from "react";
 
 const ArcReactorLoader = () => {
   const loadingText = [
-    "Venturing into the Upside Down...",
-    "Unraveling the mysteries of Hawkins...",
-    "Preparing for a Stranger Journey...",
-    "Investigating the unknown in Hawkins...",
-    "Brace yourself for an alternate dimension...",
-    "Flashing back to the Upside Down...",
-    "Unlocking secrets in the flickering lights...",
-    "Stranger Things are about to unfold...",
-    "Getting lost in the enigma of the Demogorgon...",
-    "Epic battles await in the parallel universe...",
+    "Calibrating Jarvis...",
+    "Welcome Sergeant...",
+    "On your Left...",
+    "Getting the Armour Ready...",
+    "Calling OKOYE...",
   ];
 
   const randomIndex = Math.floor(Math.random() * loadingText.length);
@@ -22,7 +17,7 @@ const ArcReactorLoader = () => {
 
   useEffect(() => {
     // Split the statement into characters
-    const charactersArray = statement.split("");
+    const charactersArray = randomLoadingText.split("");
 
     // Set up a timer to add each character to the array with a delay
     const timer = setInterval(() => {

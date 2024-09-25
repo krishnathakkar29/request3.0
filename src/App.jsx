@@ -16,7 +16,7 @@ function App() {
 
   const fetchScores = async () => {
     const response = await axios.get(
-      "https://script.googleusercontent.com/macros/echo?user_content_key=1v4Si4a0B3f91LwOFEpqNhP-AboNkzY9EYNgS4etHup3DD8JHIe74tltNolwW71OTF7jNOik9mFWaHOT2xkuG-anudVpyUM2m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnIDBRny3--5zsF62jgoRYXvRl42HButPI72IVVHB9AE_8Qhhmu1lJ1NOG24HYWbQmnZGsupB20nAwd-JFlH8w5x9-oI_ouTmGg&lib=MWBYe4i-sINVKasSrdIcjMQ16_JWBohlm"
+      "https://script.googleusercontent.com/macros/echo?user_content_key=qgyDHcv5S9VAsqEvNpd78Z2QovaxhOVcn8dTpumIztomDUuLKQLr5igQD073cFTm6EWJxJDcUYunjQsubRz1NgWJ-WnsXpLom5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnC7u_RTCo1bMHlAh0Ix4vT24hwrXRH4EyOGDJzFfeGARqRyrYk2iZxl3CUmNYasaLFHDInDaZiJ0SN-VnPAGmQtWW5DL0qXhyA&lib=MWBYe4i-sINVKasSrdIcjMQ16_JWBohlm"
     );
 
     const data = response.data;

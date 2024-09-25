@@ -87,7 +87,7 @@ const IronManModel = () => {
       {loading ? (
         <Text
           position={[-0.1, 3.4, 6.6]} // Exact surface of the model
-          fontSize={0.5}
+          fontSize={0.2}
           anchorX="center"
           anchorY="middle"
           rotation={[0, 0, 0]}
@@ -97,7 +97,7 @@ const IronManModel = () => {
             emissive="#00B5FF"
             emissiveIntensity={10}
           />
-          Loading...
+          Suiting up the armour..
         </Text>
       ) : (
         <Text
@@ -186,7 +186,7 @@ const ThorModel = () => {
       {loading ? (
         <Text
           position={[-0.2, 3.5, -6.6]} // Exact surface of the model
-          fontSize={0.5}
+          fontSize={0.2}
           anchorX="center"
           anchorY="middle"
           rotation={[0, Math.PI, 0]}
@@ -196,7 +196,7 @@ const ThorModel = () => {
             emissive="#00B5FF"
             emissiveIntensity={10}
           />
-          Loading...
+          Summoning the Thunder..
         </Text>
       ) : (
         <Text
@@ -266,7 +266,7 @@ const SpiderModel = () => {
       {loading ? (
         <Text
           position={[-6.65, 3.5, 0.6]} // Exact surface of the model
-          fontSize={0.5}
+          fontSize={0.2}
           anchorX="center"
           anchorY="middle"
           rotation={[0, -Math.PI / 2, 0]}
@@ -276,7 +276,7 @@ const SpiderModel = () => {
             emissive="#00B5FF"
             emissiveIntensity={10}
           />
-          Loading...
+          Activating Spider Senses...
         </Text>
       ) : (
         <Text
@@ -349,12 +349,12 @@ const CaptainModel = () => {
           emissive="#00B5FF"
           emissiveIntensity={10}
         />
-        Cap's Crusader
+        Cap's Crusaders
       </Text>
       {loading ? (
         <Text
           position={[6.65, 3.5, -0.5]} // Exact surface of the model
-          fontSize={0.5}
+          fontSize={0.3}
           anchorX="center"
           anchorY="middle"
           rotation={[0, Math.PI / 2, 0]}
@@ -365,7 +365,7 @@ const CaptainModel = () => {
             emissiveIntensity={10}
           />
           {/* 200 */}
-          Loading...
+          Jarvis is Loading...
           {/* 9999 */}
         </Text>
       ) : (
